@@ -17,12 +17,12 @@ class MyDict(dict):
 	'3'
 	>>> d2['empty']
 	Traceback (most recent call last):
-	...
-	KeyError: 'empty'
+		...
+	KeyError:'empty'
 	>>> d2.empty
 	Traceback (most recent call last):
-	...
-	AttributeError: 'MyDict' object has no attribute 'empty'
+		...
+	AttributeError:'MyDict' object has no attribute 'empty'
 	'''
 	def __init__(self, **keyword):
 		super(MyDict, self).__init__(**keyword)
@@ -32,7 +32,7 @@ class MyDict(dict):
 			return self[key]
 		except KeyError:
 			raise AttributeError(r"'MyDict' object has no attribute  '%s'" % key)
-	
+
 	def __setattr__(self, key, value):
 		self[key] = value
 
