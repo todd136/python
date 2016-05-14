@@ -14,10 +14,10 @@ def _format_addr(srcAddr):
         name, addr = parseaddr(srcAddr)
         return formataddr((Header(name, 'utf-8').encode(), addr))
 
-from_addr = 'shutao.wang@yooli.com'
+from_addr = '' #from email address
 password = input('password:')
 print('password = ', password)
-to_addr = 'test_134@sina.com'
+to_addr = '' # to email address
 smtp_server = 'smtp.exmail.qq.com'
 smtp_port = 25#465 #465 is ssl port
 
