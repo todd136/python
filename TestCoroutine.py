@@ -15,6 +15,7 @@ def consumer():
 
 def produce(c):
     c.send(None)
+    print(dir(c))
     n = 0
     while n < 5:
         n = n+1
