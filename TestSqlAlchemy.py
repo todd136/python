@@ -14,6 +14,19 @@ class User(Base):
     id=Column(String(20), primary_key=True)
     name = Column(String(20))
 
+    #one to multi
+    # books = relationship('Book')
+
+class Book(Base):
+    """docstring for Book"""
+    __tablename__ = 'book'
+
+    id = Column(String(20), primary_key=True)
+    name = Column(String(20))
+
+    #
+    # user_id = Column(String(20), ForeignKey('user.id'))
+
 engine = create_engine('mysql+mysqlconnector://root:123456@localhost:3306/blog')
 
 DBSession = sessionmaker(bind=engine)
